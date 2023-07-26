@@ -1,0 +1,31 @@
+<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_151_115" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="10" y="12" width="40" height="47">
+<path d="M10.0615 12.8101H49.8275V58.1416H10.0615V12.8101Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_151_115)">
+<path d="M29.9236 58.1395L13.6964 53.6084L10.0804 12.8122L49.8153 12.8115L46.1968 53.6017L29.9244 58.1389L29.9236 58.1395Z" fill="#0277BD"/>
+</g>
+<path d="M43.0983 51.0048L46.1918 16.1479L29.9489 16.1475V54.6706L43.0983 51.0048Z" fill="#039BE5"/>
+<path d="M18.3708 31.2783L18.8167 36.2807H29.9487V31.2783H18.3708Z" fill="#EBEBEB"/>
+<path d="M17.475 21.1501L17.9271 26.1542H29.9488V21.1501H17.475Z" fill="#EBEBEB"/>
+<path d="M29.9488 44.2723L29.9271 44.2787L24.387 42.7732L24.0327 38.7827H19.0389L19.7359 46.6395L29.9256 49.4849L29.9488 49.4785V44.2723Z" fill="#EBEBEB"/>
+<mask id="mask1_151_115" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="19" y="1" width="7" height="9">
+<path d="M19.4294 1.72534H25.4628V9.33839H19.4294V1.72534Z" fill="white"/>
+</mask>
+<g mask="url(#mask1_151_115)">
+<path d="M19.4329 1.72534H25.4579V4.25963H21.9523V6.79394H25.4579V9.32809H19.4329V1.72534Z" fill="#F9F4F1"/>
+</g>
+<mask id="mask2_151_115" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="26" y="1" width="7" height="9">
+<path d="M26.6528 1.72534H32.7259V9.4581H26.6528V1.72534Z" fill="white"/>
+</mask>
+<g mask="url(#mask2_151_115)">
+<path d="M26.6625 1.72534H32.6873V3.92918H29.1828V4.36985H32.6873V9.43831H26.6625V7.12458H30.1688V6.6836H26.6625V1.72534Z" fill="#F9F4F1"/>
+</g>
+<mask id="mask3_151_115" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="33" y="1" width="7" height="9">
+<path d="M33.8773 1.72534H39.9504V9.4581H33.8773V1.72534Z" fill="white"/>
+</mask>
+<g mask="url(#mask3_151_115)">
+<path d="M33.8927 1.72534H39.9179V3.92918H36.4114V4.36985H39.9179V9.43831H33.8927V7.12458H37.3972V6.6836H33.8927V1.72534Z" fill="#F9F4F1"/>
+</g>
+<path d="M41.4953 31.2788L42.3925 21.1501H29.9316V26.1542H36.9407L36.4892 31.2788H29.9316V36.2811H36.0577L35.4797 42.7704L29.9316 44.2774V49.482L40.1294 46.6399L40.204 45.7941L41.3737 32.6214L41.4953 31.2788Z" fill="white"/>
+</svg>

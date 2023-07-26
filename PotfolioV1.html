@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width initial-scale=1.0" />
+        <title>Paula Sambueno Portfolio</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;700&family=Inconsolata:wght@400;500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="PortfolioV1.css" />
+    </head>
+
+    <body>
+
+        <header>
+            <aside ><img src="./images/mocklogo.jpg" height="50" alt="logo"/></aside>
+            <nav>
+                <ul>
+                    <li><a href="#about-me">About me</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+
+            <section class="hero-section">
+                
+                <h1 class="heading-font">Welcome to my <span class="portfolio">Portfolio</span></h1>
+                <h2 class="sub-font">I'm <span class="name">Paula Enjae Sambueno</span> from Talisay City.</h2>
+                <h2 class="sub-font">Feel free to explore!</h2>
+                <article>
+                    <button type="button" class=" hero-button sub-font">Resume</button>
+                    <button type="button" class="hero-button sub-font">Cover Letter</button>
+                </article>
+            
+            </section>
+
+            
+
+            <section class="about-me" id="about-me">
+
+                <div class="about-me__section-title">
+                    <div class="green-bar"></div>
+                    <h3 class="heading-font section-title">About me</h3>
+                </div>
+
+                <div class="about-me__grid">
+
+                    <div class="about-me__content">
+                        <p class="sub-font" id="aboutme_description">I am a  Bachelor of Science in Computer Engineering in Cebu Institute of Technology University. 
+                        I am passionate about software development and have been studying and improving my skills almost everyday. 
+                        I also like teaching others to enhance their skills.  After ... my main goal is to master my craft 
+                        as well as contribute to the software development community. I am hoping to find the best workplace 
+                        for me to grow with other people and be inspired to keep on developing new and existing software and hardware. 
+                        </p>
+                    </div>
+                    
+                    <div class="about-me__pics">
+                        <div class="professional-pic">
+                            <img src="./images/aboutme1.jpg" onclick="changeText2(aboutme_description)" alt="Picture of the professional side of my life" height="300px"/>
+                        </div>
+                        <div class="casual-pic">
+                            <img src="./images/aboutme2.jpg" onclick="changeText1(aboutme_description)" alt="Example picture of my everyday life" height="250px"/>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </section>
+
+
+            <section class="skills" id="skills">
+
+                <div class="skills__section-title">
+                    <h3 class="heading-font section-title">Skills</h3>
+                    <div class="green-bar"></div>
+                </div>
+
+                <div class="skills__grid">
+                    <div class="skills-item">
+                        <img src="./images/githubLogo.svg"/>
+                        <p>Git</p>
+                    </div>
+                    <div class="skills-item">
+                        <img src="./images/figmaLogo.svg"/>
+                        <p>Figma</p>
+                    </div>
+                    <div class="skills-item">
+                        <img src="./images/firebaseLogo.svg"/>
+                        <p>Firebase</p>
+                    </div>
+                    <div class="skills-item">
+                        <img src="./images/vsLogo.svg"/>
+                        <p>Visual Studio</p>
+                    </div>
+                    <div class="skills-item">
+                        <img src="./images/vscodeLogo.svg"/>
+                        <p>Visual Studio Code</p>
+                    </div>
+                    <div class="skills-item">
+                        <img src="./images/flutterLogo.svg"/>
+                        <p>Flutter</p>
+                    </div>
+                    <div class="skills-item">
+                        <img src="./images/reactLogo.svg"/>
+                        <p>React</p>
+                    </div>
+                    <div class="skills-item">
+                        <img src="./images/javascriptLogo.svg"/>
+                        <p>Javascript</p>
+                    </div>
+                    <div class="skills-item">
+                        <img src="./images/typescriptLogo.svg"/>
+                        <p>Typescript</p>
+                    </div>
+                    <div class="skills-item">
+                        <img src="./images/javaLogo.svg"/>
+                        <p>Java</p>
+                    </div>
+                    <div class="skills-item">
+                        <img src="./images/pythonLogo.svg"/>
+                        <p>Python</p>
+                    </div>
+                    <div class="skills-item">
+                        <img src="./images/tailwindLogo.svg"/>
+                        <p>Tailwind</p>
+                    </div>
+                    <div class="skills-item">
+                        <img src="./images/cssLogo.svg"/>
+                        <p>CSS</p>
+                    </div>
+                    <div class="skills-item">
+                        <img src="./images/htmlLogo.svg"/>
+                        <p>HTML</p>
+                    </div>
+                    <div class="skills-item">
+                        <img src="./images/bootstrapLogo.svg"/>
+                        <p>Bootstrap</p>
+                    </div>
+
+                </div>
+            </section>
+
+
+
+            <section class="projects" id="projects">
+                <div class="projects__section-title">
+                    <h3 class="heading-font section-title">Projects</h3>
+                    <div class="green-bar"></div>
+                </div>
+
+                <div class="projects__cards">
+                    <article>
+                        <div class="card-pic">
+                            <img src="./images/proj1.jpg" alt="Project 1's homepage" />
+                        </div>
+                        <p>Flash Quiz</p>
+                    </article>
+
+                    <article>
+                        <div class="card-pic">
+                            <img src="./images/proj2.jpg" alt="Project 2's homepage" />
+                        </div>
+                        <p>Project 2</p>
+                    </article>
+
+                    <article>
+                        <div class="card-pic">
+                            <img src="./images/proj3.jpg" alt="Project 3's homepage" />
+                        </div>
+                        <p>Project 3</p>
+                    </article>
+
+                    <article>
+                        <div class="card-pic">
+                            <img src="./images/proj4.jpg" alt="Project 4's homepage" />
+                        </div>
+                        <p>Project 4</p>
+                    </article>
+                </div>
+            </section>
+            
+            <section class="contact" id="contact">
+                <div class="contact__section-title">
+                    <div class="green-bar"></div>
+                    <h3 class="heading-font section-title">Contact Me</h3>
+                </div>
+                <div class="contact__content">
+                    <div class="my-info">
+                        <h4 class="contact-heading">My Contact Info</h4> 
+                        <div class="my-info__grid">
+                            <img src="./images/telIcon.svg" alt="telephone icon" />
+                            <p class="sub-font">032+ 09672046604</p>
+                            <img src="./images/mailIcon.svg" alt="mail icon" />
+                            <p class="sub-font">pnj5_sambueno@gmail.com</p>
+                            <p class="sub-font">paula.sambueno@outlook.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="message-me">
+                        <h4 class="contact-heading">Send me a message</h4>
+                        <form>
+                            <textarea rows="6" placeholder="Message..." class="sub-font input-size"></textarea>
+                            <input type="text" placeholder="Name" class="sub-font input-size"/>
+                            <input type="email" placeholder="Email" class="sub-font input-size"/>
+                            <input type="tel" placeholder="Contact Number" class="sub-font input-size"/>
+                            <button type="submit" class="sub-font form-button">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer>
+            <p>Paula Sambueno All Rights Reserve</p>
+            <p>Icons from: https://icons8.com/icon/38389/git</p>
+        </footer>
+
+        <script>
+            function changeText1(aboutme_description){
+                aboutme_description.innerHTML = "Other than the professional side of my life, I am a friendly and casual person. I love spending time outdoors, exercising, and exploring food and places, but I also love just staying indoors watching films and spending time with the people I love. I generally like studying, which is how I mostly spend my time indoors. I am not very active in social medias.";
+            }
+            function changeText2(aboutme_description){
+                aboutme_description.innerHTML = "I am a  Bachelor of Science in Computer Engineering in Cebu Institute of Technology University. I am passionate about software development and have been studying and improving my skills almost everyday. I also like teaching others to enhance their skills.  After ... my main goal is to master my craft as well as contribute to the software development community. I am hoping to find the best workplace for me to grow with other people and be inspired to keep on developing new and existing software and hardware. ";
+            }
+        </script>
+
+    </body>
+
+    
+
+</html>
+
+
+ <!-- HTML
+<p id="change-text">Click me to change the text!</p>
+
+JavaScript
+const changeText = document.querySelector("#change-text");
+
+changeText.addEventListener("click", function() {
+  changeText.textContent = "Text has been changed!";
+}); -->

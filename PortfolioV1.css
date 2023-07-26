@@ -1,0 +1,620 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    color: #F9F4F1;
+}
+html{
+    scroll-behavior: smooth;
+    --_light-prim: #B2886B;
+    --_white: #F9F4F1;
+    --_accent: #D3FBD8;
+    --_black: #130A03;
+    --_grotesque: 'Darker Grotesque', sans-serif;
+    --_inconsolata: 'Inconsolata', monospace;
+}
+
+.heading-font{
+    font-weight: 400;
+    font-size: 3.4rem;
+    color: #F9F4F1;
+}
+.sub-font{
+    color: #F9F4F1;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+}
+
+.green-bar{
+    background-color: #D3FBD8;
+    width: 2px;
+}
+.section-title{
+    font-size: 1.6rem;
+    color: #D3FBD8;
+}
+
+body{
+    background-color: #130A03;
+    position: relative;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 400;
+}
+
+header{
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    /* margin: 3% 4% 3% 4%; this will make the header exceed the parent contianer's width*/
+    padding: 3% 4%;
+}
+
+.mocklogo{
+    max-height: 10px;
+    width: auto;
+}
+nav > ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-weight: 500;
+}
+nav ul li{
+    margin: 0 1rem 1rem 1rem;
+    list-style-type: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+nav ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #F9F4F1;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+nav ul li:hover::after{
+    width: 100%;
+}
+
+
+
+.hero-section{
+    height: 100vh;
+    background-image: url("./images/filteredlandingpage.png");
+    /*background-size: cover; *//*Covers the entire container even if it needs to cut or stretch*/
+    background-size: auto 110%; /*width and height- in percent of the parent element*/
+    background-repeat: no-repeat;
+    background-position: top left 100%; /*image would be at the top left and 100% move from the left */
+    padding-top: 225px;
+    padding-left: 12%;
+
+}
+.name{
+    color: #D3FBD8;
+}
+.portfolio{
+    display: block;
+}
+
+.hero-button{
+    background-color: transparent;
+    border: 1.5px solid #F9F4F1;
+    font-size: 1rem;
+    padding-block: 0.6rem;
+    padding-inline: 2.2rem;
+    cursor: pointer;
+    margin-top: 60px;
+    margin-left: 30px;
+    transition: transform 0.2s ease;
+}
+
+.hero-button:hover{
+    transform: scale(1.05);
+    background-color: #F9F4F1;
+    color: #130A03;
+}
+
+
+
+.about-me{
+    margin: 3% 4%;
+    
+}
+
+
+.about-me__section-title{
+    display: grid;
+    grid-template-columns: 1fr 100fr;
+}
+.about-me .green-bar{
+    height: 2rem;
+    grid-column: 1/2;
+}
+.about-me .section-title{
+    grid-column: 2/3;
+}
+
+/* 
+.about-me__grid{
+    display: grid;
+    grid-template-columns: 1.7fr 2fr;
+}
+.about-me__content{
+    grid-column: 1/2;
+    padding: 3% 2%;
+}
+
+.about-me__pics{
+    grid-column: 2/3;
+    padding: 3% 4%;
+    height: 80vh;
+} */
+
+
+
+
+
+.about-me__grid{
+    display: flex;
+    flex-direction: row;
+}
+.about-me__content{
+    padding: 3% 1%;
+    flex-shrink: 2;
+}
+
+.about-me__pics{
+    padding: 3% 4%;
+    height: 80vh;
+    flex-shrink: 1;
+} 
+
+
+
+
+.about-me p{
+    font-size: 1.3rem;
+}
+
+.about-me__pics .professional-pic{
+    width: 470px;
+}
+.about-me__pics .casual-pic{
+    position: relative;
+    bottom: 200px;
+    left: 130px;
+    max-width: 350px;
+    height: 62%;
+    place-self: center;
+}
+.about-me__pics .casual-pic img{
+    z-index: -1;
+    position: relative; /* the element should not be static for the z-index to work */
+    transition: transform 1s;
+}
+.about-me__pics .casual-pic:hover img{
+    position: relative;
+    cursor: pointer;
+    transform: scale(1.2);
+    z-index: 2;
+}
+
+
+
+.skills{
+    height: 70vh;
+}
+.skills .green-bar{
+    margin: auto;
+    width: 5.7rem;
+    height: 2px;
+}
+.skills__section-title{
+    text-align: center;
+    padding: 3% 4%;
+}
+.skills .section-title{
+    padding-bottom: 0.5%;
+}
+
+
+.skills__grid{
+    border-block: 1px solid #F9F4F1;
+    padding: 3% 4%;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    place-items: center;
+    text-align: center; /* aligns the image in the center of the cell. it works because image in inside a block level element which is a div*/
+    /* width: 100vw; */
+}
+@media  screen and (max-width: 726px) {
+    .skills__grid{
+        grid-template-columns: repeat(auto-fill, 50px);
+        grid-template-rows: repeat(auto-fill);
+        /* overflow: clip; */
+    }
+}
+
+.skills-item:nth-child(1){
+    /* grid-area: a; */
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+.skills-item:nth-child(2){
+    /* grid-area: b; */
+    grid-row: 3/4;
+    grid-column: 1/2;
+}
+.skills-item:nth-child(3){
+    /* grid-area: c; */
+    grid-row: 2/3;
+    grid-column: 2/3;
+}
+.skills-item:nth-child(4){
+    /* grid-area: d; */
+    grid-row: 1/2;
+    grid-column: 3/4;
+}
+.skills-item:nth-child(5){
+    /* grid-area: e; */
+    grid-row: 3/4;
+    grid-column: 3/4;
+}
+.skills-item:nth-child(6){
+    /* grid-area: f; */
+    grid-row: 2/3;
+    grid-column: 4/5;
+}
+.skills-item:nth-child(7){
+    /* grid-area: g; */
+    grid-row: 1/2;
+    grid-column: 5/6;
+}
+.skills-item:nth-child(8){
+    /* grid-area: h; */
+    grid-row: 3/4;
+    grid-column: 5/6;
+}
+.skills-item:nth-child(9){
+    /* grid-area: i; */
+    grid-row: 2/3;
+    grid-column: 6/7;
+}
+.skills-item:nth-child(10){
+    /* grid-area: j; */
+    grid-row: 1/2;
+    grid-column: 7/8;
+}
+.skills-item:nth-child(11){
+    /* grid-area: k; */
+    grid-row: 3/4;
+    grid-column: 7/8;
+}
+.skills-item:nth-child(12){
+    /* grid-area: l; */
+    grid-row: 2/3;
+    grid-column: 8/9;
+}
+.skills-item:nth-child(13){
+    /* grid-area: m; */
+    grid-row: 1/2;
+    grid-column: 9/10;
+}
+.skills-item:nth-child(14){
+    /* grid-area: n; */
+    grid-row: 3/4;
+    grid-column: 9/10;
+}
+.skills-item:nth-child(15){
+    /* grid-area: o; */
+    grid-row: 2/3;
+    grid-column: 10/11;
+}
+
+@keyframes logoBounce {
+    from{
+        transform: translateY(-5px);
+    }
+    to{
+        transform: translateY(5px);
+    }
+}
+/* @keyframes runningLogo {
+    0%{
+        transform: translate(0);
+    }
+    35%{
+        transform: translate(1000px);
+    }
+    70%{
+        
+    }
+    100%{
+        transform: translate(0px);
+    }
+} */
+
+.skills-item{
+    animation:  logoBounce 1s ease-in-out infinite alternate;
+    /* animation: runningLogo 10s linear infinite; */
+}
+.skills-item p{
+    text-align: center;
+}
+
+
+
+
+::-webkit-scrollbar{
+    width: 1em;
+}
+
+::-webkit-scrollbar-track{
+    background-color: #402E32;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #312125;
+}
+
+@supports (scrollbar-color: red blue) { /*for firefox*/
+    * {
+        scrollbar-color: #312125 #402E32;
+        scrollbar-width: auto;
+    }
+}
+
+/* .projects{
+    width: 100vw;
+}
+ */
+.projects__section-title{
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: end;
+    margin: 3% 4%;
+    gap: 8px;
+}
+
+.projects__section-title .green-bar{
+    height: 2rem;
+}
+.projects__cards{
+    display: grid;
+    grid-auto-flow: column;
+    gap: 2.5rem;
+    overflow-x: auto;
+    padding-left: 20%;
+    padding-right: 4%;
+    overscroll-behavior-inline: contain; /*wont scroll other elements once user gets to the end*/
+}
+ .projects__cards::-webkit-scrollbar-thumb{
+    background: #24181b;
+}
+
+.projects__cards >article{
+    background-color: #402E32;
+    box-shadow: 4px #F9F4F1;
+    margin-bottom: 3%;
+}
+
+.projects__cards article p{
+    font-size: 2rem;
+    color: #D3FBD8;
+    text-align: center;
+    padding: 4%;
+}
+.card-pic{
+    width: 350px;
+    /* background-color: aqua; */
+    /* z-index: 2; */
+}
+.card-pic img{
+    
+    inline-size: 100%;
+    aspect-ratio: 5/3; /*define an aspect ration for the image and will stretch it*/
+    object-fit: cover; /*since aspect ratio will stretch it then do cover value to cut instead of stretch*/
+}
+
+
+
+.contact{
+    padding: 3% 10%;
+}
+.contact__section-title .green-bar{
+    height: 2px;
+    width: 140px;
+    margin: auto;
+}
+.contact__section-title .section-title{
+    text-align: center;
+    padding-top: 4px;
+}
+.contact__section-title{
+    margin-block: 2rem;
+}
+.contact__content{
+    display: grid;
+    grid-auto-flow: column;
+    gap: 10%;
+}
+.contact-heading{
+    color: var(--_light-prim);
+    font-size: 1.6rem;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 400;
+    padding-bottom: 3%;
+}
+.my-info{
+    justify-self: center;
+}
+
+.my-info__grid{
+    display: grid;
+    grid-template-areas: 
+    "img1 number"
+    "img2 email1"
+    ". email2";
+    column-gap: 1rem;
+    padding-top: 4%;
+}
+.my-info__grid img:nth-of-type(1){
+    grid-area: img1;
+}
+.my-info__grid img:nth-of-type(2){
+    grid-area: img2;
+    padding-top: 1rem;
+}
+.my-info__grid p:nth-of-type(1){
+    grid-area: number;
+}
+.my-info__grid p:nth-of-type(2){
+    grid-area: email1;
+    padding-top: 1rem;
+}
+.my-info__grid p:nth-of-type(3){
+    grid-area: email2;
+}
+
+
+.my-info p{
+    font-family: var(--_inconsolata);
+    font-size: 1rem;
+}
+
+.message-me form{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-areas: 
+    "textbox name"
+    "textbox email"
+    "textbox number"
+    "textbox ."
+    "textbox send";
+    row-gap: 1rem;
+    column-gap: 1.5rem;
+}
+
+form *{
+    border: 1.5px solid var(--_white);
+    background: transparent;
+    padding: 4px 1rem;
+
+}
+form *:nth-child(1){
+    grid-area: textbox;
+}
+form *:nth-child(2){
+    grid-area: name;
+}
+form *:nth-child(3){
+    grid-area: email;
+}
+form *:nth-child(4){
+    grid-area: number;
+}
+form *:nth-child(5){
+    grid-area: send;
+}
+
+/* form textarea{
+    font-size: 1.1rem;
+}
+.input-size:not(textarea){
+    font-size: 1.1rem;
+    width: 100%;
+} */
+.input-size{
+    font-size: 1.1rem;
+    width: 100%;
+}
+.form-button{
+    width: 60%;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+    background-color: var(--_light-prim);
+    color: var(--_black);
+    justify-self: center;
+    border: 1.5px solid var(--_light-prim);
+}
+.form-button:hover{
+    cursor: pointer;
+    background-color: transparent;
+    border: 1.5px solid var(--_light-prim);
+    color: var(--_white);
+}
+
+
+
+
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10%;
+}
+footer p{
+    margin: 3% 4%;
+}
+
+@media  screen and (max-width:840px){
+    .about-me__grid{
+        display: grid;
+        grid-template-rows: 45vh 70vh;
+        grid-template-columns: 1fr;
+        /* width: fit-content; */ /*id what these are for*/
+        /* width: 80vw; */
+        height: 100vh;
+    }
+    .about-me__content{
+        grid-row: 1/2;
+        grid-column: 1;
+        padding: 3% 2%;
+        place-content: center;
+    }
+    
+    .about-me__pics{
+        grid-row: 2/3;
+        grid-column: 1;
+        padding: 3% 4%;
+        place-content: center;
+        height: 80%;
+    }
+
+    .about-me__pics .professional-pic img{
+        height: 300px;
+        width: 400px;
+    }
+
+    .about-me__pics .casual-pic img{
+        height: 200px;
+        width: 300px;
+    }
+
+}
+
+@media  screen and (max-width: 840px) {
+    .contact__content{
+        
+        grid-auto-flow: row;
+        
+    }
+}
+
+
+
+/* @media screen and (max-width: 1000px){ 
+    html,body {
+        min-width:1000px
+    } 
+} */
+/* this was causing the horizontal scrollbar appearing too early*/
