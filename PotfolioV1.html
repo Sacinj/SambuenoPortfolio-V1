@@ -5,6 +5,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width initial-scale=1.0" />
         <title>Paula Sambueno Portfolio</title>
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;700&family=Inconsolata:wght@400;500&display=swap" rel="stylesheet">
@@ -41,16 +42,16 @@
 
             
 
-            <section class="about-me" id="about-me">
+            <section class="about-me" id="about-me" >
 
-                <div class="about-me__section-title">
+                <div class="about-me__section-title" data-aos="fade-right">
                     <div class="green-bar"></div>
                     <h3 class="heading-font section-title">About me</h3>
                 </div>
 
                 <div class="about-me__grid">
 
-                    <div class="about-me__content">
+                    <div class="about-me__content" data-aos="fade-right">
                         <p class="sub-font" id="aboutme_description">I am a  Bachelor of Science in Computer Engineering in Cebu Institute of Technology University. 
                         I am passionate about software development and have been studying and improving my skills almost everyday. 
                         I also like teaching others to enhance their skills.  After ... my main goal is to master my craft 
@@ -59,7 +60,7 @@
                         </p>
                     </div>
                     
-                    <div class="about-me__pics">
+                    <div class="about-me__pics" data-aos="fade-left">
                         <div class="professional-pic">
                             <img src="./images/aboutme1.jpg" onclick="changeText2(aboutme_description)" alt="Picture of the professional side of my life" height="300px"/>
                         </div>
@@ -73,14 +74,14 @@
             </section>
 
 
-            <section class="skills" id="skills">
+            <section class="skills" id="skills" >
 
-                <div class="skills__section-title">
+                <div class="skills__section-title" data-aos="fade-up">
                     <h3 class="heading-font section-title">Skills</h3>
                     <div class="green-bar"></div>
                 </div>
 
-                <div class="skills__grid">
+                <div class="skills__grid" data-aos="fade-up">
                     <div class="skills-item">
                         <img src="./images/githubLogo.svg"/>
                         <p>Git</p>
@@ -147,13 +148,13 @@
 
 
 
-            <section class="projects" id="projects">
-                <div class="projects__section-title">
+            <section class="projects" id="projects" >
+                <div class="projects__section-title" data-aos="fade-left">
                     <h3 class="heading-font section-title">Projects</h3>
                     <div class="green-bar"></div>
                 </div>
 
-                <div class="projects__cards">
+                <div class="projects__cards" data-aos="fade-left">
                     <article>
                         <div class="card-pic">
                             <img src="./images/proj1.jpg" alt="Project 1's homepage" />
@@ -185,11 +186,11 @@
             </section>
             
             <section class="contact" id="contact">
-                <div class="contact__section-title">
+                <div class="contact__section-title" data-aos="fade-up">
                     <div class="green-bar"></div>
                     <h3 class="heading-font section-title">Contact Me</h3>
                 </div>
-                <div class="contact__content">
+                <div class="contact__content" data-aos="fade-up"> 
                     <div class="my-info">
                         <h4 class="contact-heading">My Contact Info</h4> 
                         <div class="my-info__grid">
@@ -201,7 +202,7 @@
                         </div>
                     </div>
                     
-                    <div class="message-me">
+                    <div class="message-me" data-aos="fade-up">
                         <h4 class="contact-heading">Send me a message</h4>
                         <form>
                             <textarea rows="6" placeholder="Message..." class="sub-font input-size"></textarea>
@@ -228,6 +229,14 @@
             function changeText2(aboutme_description){
                 aboutme_description.innerHTML = "I am a  Bachelor of Science in Computer Engineering in Cebu Institute of Technology University. I am passionate about software development and have been studying and improving my skills almost everyday. I also like teaching others to enhance their skills.  After ... my main goal is to master my craft as well as contribute to the software development community. I am hoping to find the best workplace for me to grow with other people and be inspired to keep on developing new and existing software and hardware. ";
             }
+        </script>
+
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                offset: 200, // offset (in px) from the original trigger point
+                duration: 1000,
+            });
         </script>
 
     </body>
