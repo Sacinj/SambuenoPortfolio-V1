@@ -34,8 +34,8 @@
                 <h2 class="sub-font">I'm <span class="name">Paula Enjae Sambueno</span> from Talisay City.</h2>
                 <h2 class="sub-font">Feel free to explore!</h2>
                 <article>
-                    <button type="button" class=" hero-button sub-font">Resume</button>
-                    <button type="button" class="hero-button sub-font">Cover Letter</button>
+                    <button type="button" class=" hero-button sub-font" onclick="window.open('docs/foodify.pdf', '_blank')">Resume</button>
+                    <button type="button" class="hero-button sub-font" onclick="window.open('docs/Diagram.pdf', '_blank')">Cover Letter</button>
                 </article>
             
             </section>
@@ -205,11 +205,11 @@
                     <div class="message-me" data-aos="fade-up">
                         <h4 class="contact-heading">Send me a message</h4>
                         <form>
-                            <textarea rows="6" placeholder="Message..." class="sub-font input-size"></textarea>
-                            <input type="text" placeholder="Name" class="sub-font input-size"/>
-                            <input type="email" placeholder="Email" class="sub-font input-size"/>
-                            <input type="tel" placeholder="Contact Number" class="sub-font input-size"/>
-                            <button type="submit" class="sub-font form-button">Send</button>
+                            <textarea rows="6" placeholder="Message..." class="sub-font input-size" id="contactMessage"></textarea>
+                            <input type="text" placeholder="Name" class="sub-font input-size" id="contactName"/>
+                            <input type="email" placeholder="Email" class="sub-font input-size" id="contactEmail"/>
+                            <input type="tel" placeholder="Contact Number" class="sub-font input-size" id="contactNum"/>
+                            <button type="submit" class="sub-font form-button" id="sendMessage">Send</button>
                         </form>
                     </div>
                 </div>
@@ -237,6 +237,34 @@
                 offset: 200, // offset (in px) from the original trigger point
                 duration: 1000,
             });
+        </script>
+
+
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script>
+            var btn = document.getElementById('sendMessage');
+            btn.addEventListener('click', function(e){
+                e.preventDefault();
+                var name = document.getElementById('contactName').value;
+                var email = document.getElementById('contactEmail').value;
+                var contactNum = document.getElementById('contactNum').value;
+                var message = document.getElementById('contactMessage').value;
+                var body = "Name: " +name+ "<br/> Email: " +email+ "<br/> Contact Num: " +contactNum+ "<br/> Message: "+message;
+                console.log('btn clicked');
+
+                Email.send({
+                    SecureToken : "67a285b3-557d-421b-9152-5f07dd4a0a8e",
+                    To : 'jealouspottato@gmail.com',
+                    From : "jealouspottato@gmail.com",
+                    Subject : "Portfolio Contact Message",
+                    Body : body
+                }).then(
+                message => alert(message)
+            );
+            })
+
+            
+
         </script>
 
     </body>
